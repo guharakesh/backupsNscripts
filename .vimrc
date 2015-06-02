@@ -7,22 +7,36 @@ set laststatus=2
 " Show the current cursor position
 set ruler
 
+" Turn on line numbers
+set number
+
 " Enable syntax highlighting
 syntax on
 filetype on
 
 " Set indents
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set noexpandtab
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
+set autoindent
+set smartindent
+
+" Searching and patters
+set ignorecase
+set smartcase
 
 " Disable arrow keys
-noremap		<Up>		<NOP>
-noremap		<Down>	<NOP>
-noremap		<Left>	<NOP>
-noremap		<Right>	<NOP>
-inoremap		<Up>		<NOP>
-inoremap		<Down>	<NOP>
-inoremap		<Left>	<NOP>
-inoremap		<Right>	<NOP>
+noremap     <Up>    <NOP>
+noremap     <Down>  <NOP>
+noremap     <Left>  <NOP>
+noremap     <Right> <NOP>
+inoremap    <Up>    <NOP>
+inoremap    <Down>  <NOP>
+inoremap    <Left>  <NOP>
+inoremap    <Right> <NOP>
+
+" Filetype specific changes
+au Filetype javascript setlocal sw=2 ts=2 expandtab
+au Filetype html,xhtml,xml,css setlocal expandtab sw=2 ts=2 expandtab
+au Filetype python setlocal expandtab sw=4 ts=4 cinwords=if,elif,else,for,while,try,except,finally,def,class,with
