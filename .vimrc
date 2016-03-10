@@ -37,7 +37,9 @@ inoremap    <Left>  <NOP>
 inoremap    <Right> <NOP>
 
 " Filetype specific changes
-au Filetype javascript setlocal sw=2 ts=2 expandtab
 au BufNewFile,BufRead *.json set ft=javascript
-au Filetype html,xhtml,xml,css setlocal expandtab sw=2 ts=2 expandtab
+au BufNewFile,BufRead *.ejs set ft=html
+au BufNewFile,BufRead Vagrantfile set ft=ruby
+au BufNewFile,BufRead *.sh set ft=javascript
+au Filetype javascript,ruby,html,xhtml,xml,css setlocal expandtab sw=2 ts=2 expandtab
 au Filetype python setlocal expandtab sw=4 ts=4 cinwords=if,elif,else,for,while,try,except,finally,def,class,with
