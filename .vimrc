@@ -40,6 +40,10 @@ inoremap    <Right> <NOP>
 au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.ejs set ft=html
 au BufNewFile,BufRead Vagrantfile set ft=ruby
+au BufNewFile,BufRead *.yml set ft=ruby
 au BufNewFile,BufRead *.sh set ft=javascript
 au Filetype javascript,ruby,html,xhtml,xml,css setlocal expandtab sw=2 ts=2 expandtab
 au Filetype python setlocal expandtab sw=4 ts=4 cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+
+execute pathogen#infect()
+filetype plugin indent on
